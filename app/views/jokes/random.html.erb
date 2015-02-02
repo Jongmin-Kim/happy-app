@@ -1,0 +1,9 @@
+<table>
+  <tr>
+    <% @joke = @jokes[rand(@jokes.length)] %>
+    <td><%= @joke.setup %></td>
+    <td><%= @joke.punch_line %></td>
+  </tr>
+</table>
+<%= button_to 'Pearl of Wisdom', quotes_random_path, :method => :get %>
+<%= button_to 'Click for a Funny', jokes_random_path, :method => :get %>

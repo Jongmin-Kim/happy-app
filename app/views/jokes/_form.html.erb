@@ -1,0 +1,17 @@
+<%= form_for @joke do |f| %>
+
+  <p>
+    <%= f.label :setup %><br>
+    <%= f.text_area :setup %>
+  </p>
+
+  <p>
+    <%= f.label :punch_line %><br>
+    <%= f.text_area :punch_line %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>

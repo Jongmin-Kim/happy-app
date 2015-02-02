@@ -1,0 +1,21 @@
+<h1>Listing quotes</h1>
+
+<table>
+  <tr>
+    <th>Quote</th>
+  </tr>
+  
+  <% @quotes.each do |quote| %>
+    <tr>
+      <td><%= quote.quote %></td>
+      <td><%= link_to 'Delete', quote_path(quote), 
+              method: :delete, 
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table><br>
+
+<%= link_to 'New quotes', new_quote_path %>
+
+
+
